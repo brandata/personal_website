@@ -37,7 +37,7 @@
     <!-- Custom styles for this template -->
 
     <link href="{% static 'main/css/resume.css' %}" rel="stylesheet">
-{#    <link href="{% static 'main/css/resume.min.css' %}" rel="stylesheet">#}
+    {#    <link href="{% static 'main/css/resume.min.css' %}" rel="stylesheet">#}
 </head>
 
 <body id="page-top">
@@ -46,7 +46,8 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Brandon Haw</span>
         <span class="d-none d-lg-block">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'main/img/profile.png' %}" alt="">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'main/img/profile.png' %}"
+                 alt="">
           </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -382,7 +383,9 @@
                     {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Automatic Detection of Street Numbers</h5>
-                        <p class="card-text">Created</p>
+                        <p class="card-text">Created a system capable of finding all street numbers (house numbers) from
+                            an image. This includes finding the location in the image, putting a bounding box around
+                            the numbers, and process the image to extract the numbers themselves.</p>
                         <p class="card-text mt-auto">
                             <small class="text-monospace">Deep Learning, Computer Vision</small>
                             <br>
@@ -394,9 +397,8 @@
                     {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Comparison of Learning Algorithms</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
+                        <p class="card-text">Compared several supervised learning algorithms on a wide range of data
+                            types and tasks to highlight the strengths and weaknesses of each.</p>
                         <p class="card-text mt-auto">
                             <small class="text-monospace">Machine Learning, Deep Learning, NLP</small>
                             <br>
@@ -412,10 +414,9 @@
                     {#                    <img class="card-img-top" src="{% static 'main/proj_portfolio.png' %}" alt="Card image cap">#}
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Stock Market Simulator</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer This is a wider card with supporting
-                            text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Created a stock market simulator to test out various machine learning and
+                            reinforcement learning algorithms as the backbone for an automated stock trader.
+                            Includes Deep-Q reinforcement learning algorithms. </p>
                         <p class="card-text mt-auto">
                             <small class="text-monospace">Machine Learning, Reinforcement Learning</small>
                             <br>
@@ -427,28 +428,30 @@
                     {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Comparison of Unsupervised Algorithms</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
+                        <p class="card-text">Comparison of unsupervised learning algorithms and dimensionality
+                            reduction. Algorithms tested – k-means, expectation maximization, PCA,
+                            ICA, randomized projections, singular value decomposition.</p>
                         <p class="card-text mt-auto">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-monospace">Machine Learning</small>
+                            <br>
+                            <small class="text-muted">Python, numpy, scikit-learn</small>
                         </p>
                     </div>
                 </div>
                 <div class="card">
                     {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
+                        <h5 class="card-title">Open AI Gym</h5>
+                        <p class="card-text">Created several Reinforcement Learning/AI agents to solve various Open
+                            AI Gym problems and games.</p>
                         <p class="card-text mt-auto">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-monospace">Machine/Reinforcement/Deep Learning</small>
+                            <br>
+                            <small class="text-muted">Python, Pytorch, numpy, scikit-learn</small>
                         </p>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -466,7 +469,6 @@
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'main/vendor/jquery/jquery.min.js' %}"></script>
 {#<script src="{% static 'main/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>#}
-
 
 <!-- Plugin JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
