@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's9_1x7+@=^92ts=lcf($buz)53jgj7%&drb%r7lntvoqjkrn-6'
+# SECRET_KEY = 's9_1x7+@=^92ts=lcf($buz)53jgj7%&drb%r7lntvoqjkrn-6'
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 's9_1x7+@=^92ts=lcf($buz)53jgj7%&drb%r7lntvoqjkrn-6')
 
@@ -137,3 +137,6 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-136675571-1'
