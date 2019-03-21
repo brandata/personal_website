@@ -137,6 +137,3 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
-GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-136675571-1'
