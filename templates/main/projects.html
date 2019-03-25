@@ -25,6 +25,11 @@
     <link href="{% static 'main/css/freelancer.css' %}" rel="stylesheet">
     <link href="{% static 'main/css/resume.css' %}" rel="stylesheet">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/img/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'main/img/favicon/site.webmanifest' %}">
+
 </head>
 
 <body id="page-top">
@@ -67,8 +72,8 @@
 <!-- Portfolio Grid Section -->
 <section class="portfolio" id="portfolio">
     <div class="container">
-        <h2 class="text-center mb-5">Portfolio</h2>
-{#        <br>#}
+        <h2 class="text-center mb-5">Projects</h2>
+        {#        <br>#}
         <div class="row">
             <div class="col-md-6 col-lg-4">
                 <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -167,20 +172,9 @@
 
 <div class="copyright py-4 text-center text-white">
     <div class="container">
-        <small>Copyright &copy; Your Website 2019</small>
+        <small>Copyright &copy; Brandon Haw 2019</small>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 {# +++++++++++++++++++++++ MODALS ++++++++++++++++++++++++ #}
@@ -352,6 +346,21 @@
 <script src="{% static 'main/js/freelancer.js' %}"></script>
 
 
+<script id="google-analytics" type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-136675571-1', 'auto');
+    ga('send', 'pageview');
+</script>
 
 
 {#<script src="{% static 'main/js/resume.min.js' %}"></script>#}

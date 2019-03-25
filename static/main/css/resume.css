@@ -190,3 +190,7 @@ a {
 a:hover, a:focus, a:active {
   color: #54a0ff;
 }
+
+.copyright {
+  background-color: #1a252f;
+}
