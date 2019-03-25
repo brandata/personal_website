@@ -5,3 +5,7 @@ from django.http import HttpResponse
 def homepage(request):
     return render(request=request,
                   template_name="main/index.html")
+
+def projects(request):
+    return render(request=request,
+                  template_name="main/projects.html")
