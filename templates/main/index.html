@@ -1,501 +1,538 @@
 {% extends "main/base.html" %}
 
 {% block content %}
-<head>
-    {% load static %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136675571-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <head>
+        {% load static %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136675571-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
+            gtag('js', new Date());
 
-        gtag('config', 'UA-136675571-1');
-    </script>
+            gtag('config', 'UA-136675571-1');
+        </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Brandon Haw Personal Website</title>
+        <title>Brandon Haw Personal Website</title>
 
-    <!-- Bootstrap core CSS -->
-    {#    <link href="{% static 'main/css/home.css' %}" rel="stylesheet">#}
-    {#    <link href="{% static 'main/vendor/bootstrap/css/bootstrap-grid.min.css' %}" rel="stylesheet">#}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        {#    <link href="{% static 'main/css/home.css' %}" rel="stylesheet">#}
+        {#    <link href="{% static 'main/vendor/bootstrap/css/bootstrap-grid.min.css' %}" rel="stylesheet">#}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <!-- Custom fonts for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+        <link rel="stylesheet"
+              href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link href="{% static 'main/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
 
-    <link href="{% static 'main/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
+        <link href="{% static 'main/css/resume.css' %}" rel="stylesheet">
+        {#    <link href="{% static 'main/css/resume.min.css' %}" rel="stylesheet">#}
+    </head>
 
-    <link href="{% static 'main/css/resume.css' %}" rel="stylesheet">
-    {#    <link href="{% static 'main/css/resume.min.css' %}" rel="stylesheet">#}
-</head>
+    <body id="page-top">
 
-<body id="page-top">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Brandon Haw</span>
-        <span class="d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Brandon Haw</span>
+            <span class="d-none d-lg-block">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'main/img/profile.png' %}"
                  alt="">
           </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
-            </li>
-        </ul>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+            <div class="w-100">
+                <h1 class="mb-0">Brandon
+                    <span class="text-primary">Haw</span>
+                </h1>
+                <div class="subheading mb-5">Toronto, Ontario, Canada ·
+                    <a href="mailto:brandon.haw@gmail.com">brandon.haw@gmail.com</a>
+                </div>
+                <p class="lead mb-5">Data Science and Analytics, Machine Learning, and Artificial Intelligence. Based
+                    out of
+                    Toronto, Ontario.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/brandonhaw/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/brandata">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-kaggle"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+            <div class="w-100">
+                <h2 class="mb-5">Experience</h2>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Internal PLM Consultant</h3>
+                        <div class="subheading mb-3">Siemens Canada</div>
+                        <p>
+                        <ul>
+                            <li>Part of Siemens Product Lifecycle Management (PLM) Team, tasked with improving the
+                                manufacturing and engineering efficiency of Siemens through the deployment of Siemens
+                                owned
+                                PLM software
+                            </li>
+                            <li>Conducted site visits and interviews in various Siemens plants to map all business and
+                                engineering processes and their associated IT/software systems
+                            </li>
+                            <li>Identified issues present within the business/engineering processes and uncovered root
+                                causes
+                            </li>
+                            <li>Aligned software solutions to business requirements, targeting high potential areas
+                                first
+                            </li>
+                            <li>Worked with solutions team to develop a deployment plan best suited for the client’s
+                                needs
+                            </li>
+                            <li>Generated proposals and budgets to be used for sales purposes</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Sept. 2015 - Sept. 2016</span>
+                    </div>
+                </div>
+                <hr class="m-5">
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Engineering Project Support</h3>
+                        <div class="subheading mb-3">Siemens Canada</div>
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;Project Management Office</h4>
+                        <p>
+                        <ul>
+                            <li>Responsible for analyzing financial data and generating quarterly reports for over 100
+                                projects
+                            </li>
+                            <li>Created comprehensive templates and increased the quality of reporting enabling more
+                                accurate tracking of project progress. Reports used by executive management and CEO to
+                                select projects for internal review
+                            </li>
+                            <li>Conducted internal project reviews, uncovered root causes to project issues, suggested
+                                corrective action. Recovered $600K in project costs in one instance
+                            </li>
+                            <li>Tracked implementation of PM@Siemens project management methodology for 8 divisions.
+                                Worked
+                                with local PM@Siemens coordinators to resolve project reporting issues
+                            </li>
+                        </ul>
+                        </p>
+
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;Siemens Engineering and Technology Academy</h4>
+                        <p>
+                        <ul>
+                            <li>Provided project support in the creation of a new youth development program within
+                                Siemens
+                            </li>
+                            <li>Created project schedules, timelines, and contributed to cost estimate and budget
+                                documentation
+                            </li>
+                            <li>Presented the program at various schools throughout Ontario and networked with potential
+                                students
+                            </li>
+                        </ul>
+                        </p>
+
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;Engineering Enabler Project</h4>
+                        <p>
+                        <ul>
+                            <li>Part of Engineering Enabler Team, tasked with realizing CEO Robert Hardt's Country
+                                Opportunity Plan aimed at capitalizing on Siemens engineering strengths to drive future
+                                growth
+                            </li>
+                            <li>Helped develop plan to enhance the cohesiveness of the engineering culture within
+                                Siemens to
+                                help increase the retention of current employees and better attract new employees
+                            </li>
+                            <li>Part of small team tasked with restructuring Siemens Canada's internal engineering
+                                career
+                                path infrastructure
+                            </li>
+                        </ul>
+                        </p>
+
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jul. 2013 - Sept. 2015</span>
+                    </div>
+                </div>
+                <hr class="m-5">
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">NSERC Researcher</h3>
+                        <div class="subheading mb-3">Queen's University</div>
+                        <p>
+                        <ul>
+                            <li>Collaborated with Master’s and Ph.D. students, professors, and technicians, contributing
+                                to
+                                a variety of research projects
+                            </li>
+                            <li>Developed and implemented a program in MATLAB that more quickly and accurately processed
+                                images depicting void nucleation in Micro XCT images of dual-phased steels, reducing the
+                                amount of resources required for raw image processing
+                            </li>
+                            <li>
+                                Increased the versatility of the Micro XCT x-ray scanner by designing and fabricating a
+                                machine extension using SolidWorks, enabling a wider range of samples to be tested
+                            </li>
+                            <li>
+                                Designed custom stress testing equipment using SolidWorks
+                            </li>
+                            <li>
+                                Performed failure analysis and quantified a variety of stresses in metal samples, using
+                                a
+                                self-written code in MATLAB
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Apr. 2011 - Sept. 2011</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+            <div class="w-100">
+                <h2 class="mb-5">Education</h2>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Georgia Institute of Technology</h3>
+                        <div class="subheading mb-3">Master of Computer Science</div>
+                        <h4>Machine Learning Sepecialization</h4>
+                        <div>Graduated with a Masters in Computer Science with a specialization in Machine Learning.
+                            Practical experience in Computer Vision, Deep Learning, Machine Learning, Reinforcement
+                            Learning, and Artificial Intelligence.
+                        </div>
+                        {#                    <p>GPA: 3.23</p>#}
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jan. 2017 - Dec. 2018</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Queen's University</h3>
+                        <div class="subheading mb-3">Bachelors of Applied Science</div>
+                        <h4>Mechanical Engineering</h4>
+                        <div>
+                            General mechanical engineering option. Experience with aspects of electrical engineering
+                            through
+                            the completion of several design projects, and computer engineering by undertaking a thesis
+                            involving computer vision and machine learning.
+                        </div>
+                        {#                    <p>GPA: 3.56</p>#}
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Sept. 2008 - May 2012</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+            <div class="w-100">
+                <h2 class="mb-5">Skills</h2>
+
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item">
+                         <i class="devicon-python-plain" rel="tooltip" title="Python"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-r-project" rel="tooltip" title="R"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-java-plain"  rel="tooltip" title="Java"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-git-plain"  title="Git"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-github-plain" rel="tooltip" title="Github"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-cplusplus-plain" title="C++"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-html5-plain" rel="tooltip" title="Html5"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-css3-plain" rel="tooltip" title="CSS3"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-android-plain" rel="tooltip" title="Android"></i>
+                    </li>
+                </ul>
+                    <div class="subheading mb-3"></div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item">
+                        <i class="devicon-javascript-plain" rel="tooltip" title="Javascript"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-apache-plain" rel="tooltip" title="Apache"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-d3js-plain" rel="tooltip" title="D3.js"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-heroku-plain" rel="tooltip" title="Heroku"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-postgresql-plain" rel="tooltip" title="PostgreSQL"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="devicon-heroku-plain" rel="tooltip" title="Heroku"></i>
+                    </li>
+                </ul>
+
+                <div class="subheading mb-3">Other</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        PyTorch
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        TensorFlow
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Pandas, Numpy, Scipy, Jupyter
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Web Development - Django, CSS, HTML, JS
+                    </li>
+                </ul>
+                <br>
+                <div class="subheading mb-3">Practical experience with</div>
+                <ul class="fa-ul mb-0">
+                    <li><i class="fa-li fa fa-check"></i>Deep Learning - CNNs, RNNs, GANs, embeddings, transfer
+                        learning,
+                        etc.
+                    </li>
+                    <li><i class="fa-li fa fa-check"></i>Machine Learning</li>
+                    <li><i class="fa-li fa fa-check"></i>Reinforcement Learning</li>
+                    <li><i class="fa-li fa fa-check"></i>Natural Language Processing</li>
+                    <li><i class="fa-li fa fa-check"></i>Computer Vision</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
+            <div class="w-100">
+                <h2 class="mb-5">Projects</h2>
+
+                <div class="card-group">
+                    <div class="card">
+                        {#                    <img class="card-img-top" src="{% static 'main/proj_portfolio.png' %}" alt="Card image cap">#}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Personal Blog and Website</h5>
+                            <p class="card-text">This website was created in Django, utilizing python and other popular
+                                web
+                                tools. The purpose of this website is to showcase work I have done, and to serve as a
+                                point
+                                of contact for myself.</p>
+                            <p class="card-text mt-auto">
+                                <small class="text-monospace" style="align-content: baseline">Web Development
+                                </small>
+                                <br>
+                                <small class="text-muted">Python, Django, HTML5, CSS4, Postgresql, Git, Heroku
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Automatic Detection of Street Numbers</h5>
+                            <p class="card-text">Created a system capable of finding all street numbers (house numbers)
+                                from
+                                an image. This includes finding the location in the image, putting a bounding box around
+                                the numbers, and process the image to extract the numbers themselves.</p>
+                            <p class="card-text mt-auto">
+                                <small class="text-monospace">Deep Learning, Computer Vision</small>
+                                <br>
+                                <small class="text-muted">Python, Keras, numpy, scipy, TensorFlow</small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Comparison of Learning Algorithms</h5>
+                            <p class="card-text">Compared several supervised learning algorithms on a wide range of data
+                                types and tasks to highlight the strengths and weaknesses of each.</p>
+                            <p class="card-text mt-auto">
+                                <small class="text-monospace">Machine Learning, Deep Learning, NLP</small>
+                                <br>
+                                <small class="text-muted">Python, Keras, numpy, scipy, TensorFlow, scikit-learn</small>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="card-group">
+                    <div class="card">
+                        {#                    <img class="card-img-top" src="{% static 'main/proj_portfolio.png' %}" alt="Card image cap">#}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Stock Market Simulator</h5>
+                            <p class="card-text">Created a stock market simulator to test out various machine learning
+                                and
+                                reinforcement learning algorithms as the backbone for an automated stock trader.
+                                Includes Deep-Q reinforcement learning algorithms. </p>
+                            <p class="card-text mt-auto">
+                                <small class="text-monospace">Machine Learning, Reinforcement Learning</small>
+                                <br>
+                                <small class="text-muted">Python, numpy, scikit-learn</small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Comparison of Unsupervised Algorithms</h5>
+                            <p class="card-text">Comparison of unsupervised learning algorithms and dimensionality
+                                reduction. Algorithms tested – k-means, expectation maximization, PCA,
+                                ICA, randomized projections, singular value decomposition.</p>
+                            <p class="card-text mt-auto">
+                                <small class="text-monospace">Machine Learning</small>
+                                <br>
+                                <small class="text-muted">Python, numpy, scikit-learn</small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Open AI Gym</h5>
+                            <p class="card-text">Created several Reinforcement Learning/AI agents to solve various Open
+                                AI Gym problems and games.</p>
+                            <p class="card-text mt-auto">
+                                <small class="text-monospace">Machine/Reinforcement/Deep Learning</small>
+                                <br>
+                                <small class="text-muted">Python, Pytorch, numpy, scikit-learn</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="blog">
+            <div class="w-100">
+                <h2 class="mb-5">blog</h2>
+                <p>Coming Soon</p>
+            </div>
+        </section>
     </div>
-</nav>
 
-<div class="container-fluid p-0">
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'main/vendor/jquery/jquery.min.js' %}"></script>
+    {#<script src="{% static 'main/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>#}
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-        <div class="w-100">
-            <h1 class="mb-0">Brandon
-                <span class="text-primary">Haw</span>
-            </h1>
-            <div class="subheading mb-5">Toronto, Ontario, Canada ·
-                <a href="mailto:brandon.haw@gmail.com">brandon.haw@gmail.com</a>
-            </div>
-            <p class="lead mb-5">Data Science and Analytics, Machine Learning, and Artificial Intelligence. Based out of
-                Toronto, Ontario.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/brandonhaw/">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/brandata">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-kaggle"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Plugin JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
 
-    <hr class="m-0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
 
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-        <div class="w-100">
-            <h2 class="mb-5">Experience</h2>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Internal PLM Consultant</h3>
-                    <div class="subheading mb-3">Siemens Canada</div>
-                    <p>
-                    <ul>
-                        <li>Part of Siemens Product Lifecycle Management (PLM) Team, tasked with improving the
-                            manufacturing and engineering efficiency of Siemens through the deployment of Siemens owned
-                            PLM software
-                        </li>
-                        <li>Conducted site visits and interviews in various Siemens plants to map all business and
-                            engineering processes and their associated IT/software systems
-                        </li>
-                        <li>Identified issues present within the business/engineering processes and uncovered root
-                            causes
-                        </li>
-                        <li>Aligned software solutions to business requirements, targeting high potential areas first
-                        </li>
-                        <li>Worked with solutions team to develop a deployment plan best suited for the client’s needs
-                        </li>
-                        <li>Generated proposals and budgets to be used for sales purposes</li>
-                    </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Sept. 2015 - Sept. 2016</span>
-                </div>
-            </div>
-            <hr class="m-5">
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Engineering Project Support</h3>
-                    <div class="subheading mb-3">Siemens Canada</div>
-                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;Project Management Office</h4>
-                    <p>
-                    <ul>
-                        <li>Responsible for analyzing financial data and generating quarterly reports for over 100
-                            projects
-                        </li>
-                        <li>Created comprehensive templates and increased the quality of reporting enabling more
-                            accurate tracking of project progress. Reports used by executive management and CEO to
-                            select projects for internal review
-                        </li>
-                        <li>Conducted internal project reviews, uncovered root causes to project issues, suggested
-                            corrective action. Recovered $600K in project costs in one instance
-                        </li>
-                        <li>Tracked implementation of PM@Siemens project management methodology for 8 divisions. Worked
-                            with local PM@Siemens coordinators to resolve project reporting issues
-                        </li>
-                    </ul>
-                    </p>
-
-                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;Siemens Engineering and Technology Academy</h4>
-                    <p>
-                    <ul>
-                        <li>Provided project support in the creation of a new youth development program within Siemens
-                        </li>
-                        <li>Created project schedules, timelines, and contributed to cost estimate and budget
-                            documentation
-                        </li>
-                        <li>Presented the program at various schools throughout Ontario and networked with potential
-                            students
-                        </li>
-                    </ul>
-                    </p>
-
-                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;Engineering Enabler Project</h4>
-                    <p>
-                    <ul>
-                        <li>Part of Engineering Enabler Team, tasked with realizing CEO Robert Hardt's Country
-                            Opportunity Plan aimed at capitalizing on Siemens engineering strengths to drive future
-                            growth
-                        </li>
-                        <li>Helped develop plan to enhance the cohesiveness of the engineering culture within Siemens to
-                            help increase the retention of current employees and better attract new employees
-                        </li>
-                        <li>Part of small team tasked with restructuring Siemens Canada's internal engineering career
-                            path infrastructure
-                        </li>
-                    </ul>
-                    </p>
-
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jul. 2013 - Sept. 2015</span>
-                </div>
-            </div>
-            <hr class="m-5">
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">NSERC Researcher</h3>
-                    <div class="subheading mb-3">Queen's University</div>
-                    <p>
-                    <ul>
-                        <li>Collaborated with Master’s and Ph.D. students, professors, and technicians, contributing to
-                            a variety of research projects
-                        </li>
-                        <li>Developed and implemented a program in MATLAB that more quickly and accurately processed
-                            images depicting void nucleation in Micro XCT images of dual-phased steels, reducing the
-                            amount of resources required for raw image processing
-                        </li>
-                        <li>
-                            Increased the versatility of the Micro XCT x-ray scanner by designing and fabricating a
-                            machine extension using SolidWorks, enabling a wider range of samples to be tested
-                        </li>
-                        <li>
-                            Designed custom stress testing equipment using SolidWorks
-                        </li>
-                        <li>
-                            Performed failure analysis and quantified a variety of stresses in metal samples, using a
-                            self-written code in MATLAB
-                        </li>
-                    </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Apr. 2011 - Sept. 2011</span>
-                </div>
-            </div>
-
-
-        </div>
-
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-        <div class="w-100">
-            <h2 class="mb-5">Education</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Georgia Institute of Technology</h3>
-                    <div class="subheading mb-3">Master of Computer Science</div>
-                    <h4>Machine Learning Sepecialization</h4>
-                    <div>Graduated with a Masters in Computer Science with a specialization in Machine Learning.
-                        Practical experience in Computer Vision, Deep Learning, Machine Learning, Reinforcement
-                        Learning, and Artificial Intelligence.
-                    </div>
-                    {#                    <p>GPA: 3.23</p>#}
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan. 2017 - Dec. 2018</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                <div class="resume-content">
-                    <h3 class="mb-0">Queen's University</h3>
-                    <div class="subheading mb-3">Bachelors of Applied Science</div>
-                    <h4>Mechanical Engineering</h4>
-                    <div>
-                        General mechanical engineering option. Experience with aspects of electrical engineering through
-                        the completion of several design projects, and computer engineering by undertaking a thesis
-                        involving computer vision and machine learning.
-                    </div>
-                    {#                    <p>GPA: 3.56</p>#}
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Sept. 2008 - May 2012</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-        <div class="w-100">
-            <h2 class="mb-5">Skills</h2>
-
-            <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-            <ul class="list-inline dev-icons">
-                <li class="list-inline-item">
-                    <i class="fab fa-python"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-r-project"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-java"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-git"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-github"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-html5"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-css3"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-android"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-wordpress"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-gulp"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-grunt"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-npm"></i>
-                </li>
-            </ul>
-
-            <div class="subheading mb-3">Other</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    PyTorch
-                </li>
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    TensorFlow
-                </li>
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Pandas, Numpy, Scipy, Jupyter
-                </li>
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Web Development - Django, CSS, HTML, JS
-                </li>
-            </ul>
-            <br>
-            <div class="subheading mb-3">Practical experience with</div>
-            <ul class="fa-ul mb-0">
-                <li><i class="fa-li fa fa-check"></i>Deep Learning - CNNs, RNNs, GANs, embeddings, transfer learning,
-                    etc.
-                </li>
-                <li><i class="fa-li fa fa-check"></i>Machine Learning</li>
-                <li><i class="fa-li fa fa-check"></i>Reinforcement Learning</li>
-                <li><i class="fa-li fa fa-check"></i>Natural Language Processing</li>
-                <li><i class="fa-li fa fa-check"></i>Computer Vision</li>
-            </ul>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-        <div class="w-100">
-            <h2 class="mb-5">Projects</h2>
-
-            <div class="card-group">
-                <div class="card">
-                    {#                    <img class="card-img-top" src="{% static 'main/proj_portfolio.png' %}" alt="Card image cap">#}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Personal Blog and Website</h5>
-                        <p class="card-text">This website was created in Django, utilizing python and other popular web
-                            tools. The purpose of this website is to showcase work I have done, and to serve as a point
-                            of contact for myself.</p>
-                        <p class="card-text mt-auto">
-                            <small class="text-monospace" style="align-content: baseline">Web Development
-                            </small>
-                            <br>
-                            <small class="text-muted">Python, Django, HTML5, CSS4, Postgresql, Git, Heroku
-                            </small>
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Automatic Detection of Street Numbers</h5>
-                        <p class="card-text">Created a system capable of finding all street numbers (house numbers) from
-                            an image. This includes finding the location in the image, putting a bounding box around
-                            the numbers, and process the image to extract the numbers themselves.</p>
-                        <p class="card-text mt-auto">
-                            <small class="text-monospace">Deep Learning, Computer Vision</small>
-                            <br>
-                            <small class="text-muted">Python, Keras, numpy, scipy, TensorFlow</small>
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Comparison of Learning Algorithms</h5>
-                        <p class="card-text">Compared several supervised learning algorithms on a wide range of data
-                            types and tasks to highlight the strengths and weaknesses of each.</p>
-                        <p class="card-text mt-auto">
-                            <small class="text-monospace">Machine Learning, Deep Learning, NLP</small>
-                            <br>
-                            <small class="text-muted">Python, Keras, numpy, scipy, TensorFlow, scikit-learn</small>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <br>
-            <div class="card-group">
-                <div class="card">
-                    {#                    <img class="card-img-top" src="{% static 'main/proj_portfolio.png' %}" alt="Card image cap">#}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Stock Market Simulator</h5>
-                        <p class="card-text">Created a stock market simulator to test out various machine learning and
-                            reinforcement learning algorithms as the backbone for an automated stock trader.
-                            Includes Deep-Q reinforcement learning algorithms. </p>
-                        <p class="card-text mt-auto">
-                            <small class="text-monospace">Machine Learning, Reinforcement Learning</small>
-                            <br>
-                            <small class="text-muted">Python, numpy, scikit-learn</small>
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Comparison of Unsupervised Algorithms</h5>
-                        <p class="card-text">Comparison of unsupervised learning algorithms and dimensionality
-                            reduction. Algorithms tested – k-means, expectation maximization, PCA,
-                            ICA, randomized projections, singular value decomposition.</p>
-                        <p class="card-text mt-auto">
-                            <small class="text-monospace">Machine Learning</small>
-                            <br>
-                            <small class="text-muted">Python, numpy, scikit-learn</small>
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    {#                    <img class="card-img-top" src="..." alt="Card image cap">#}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Open AI Gym</h5>
-                        <p class="card-text">Created several Reinforcement Learning/AI agents to solve various Open
-                            AI Gym problems and games.</p>
-                        <p class="card-text mt-auto">
-                            <small class="text-monospace">Machine/Reinforcement/Deep Learning</small>
-                            <br>
-                            <small class="text-muted">Python, Pytorch, numpy, scikit-learn</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="blog">
-        <div class="w-100">
-            <h2 class="mb-5">blog</h2>
-            <p>Coming Soon</p>
-        </div>
-    </section>
-</div>
-
-<!-- Bootstrap core JavaScript -->
-<script src="{% static 'main/vendor/jquery/jquery.min.js' %}"></script>
-{#<script src="{% static 'main/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>#}
-
-<!-- Plugin JavaScript -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-<script src="{% static 'main/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-<script src="{% static 'main/js/resume.min.js' %}"></script>
-<!-- Custom scripts for this template -->
-</body>
+    <script src="{% static 'main/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'main/js/resume.min.js' %}"></script>
+    <!-- Custom scripts for this template -->
+    </body>
 
 {% endblock content %}
 
 {% block ga %}
-<script id="google-analytics" type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-136675571-1', 'auto');
-  ga('send', 'pageview');
-</script>
+    <script id="google-analytics" type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-136675571-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 {% endblock ga %}
