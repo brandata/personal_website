@@ -67,6 +67,10 @@ p.lead {
   margin-right: 1rem;
 }
 
+img.rounded-corners {
+  border-radius: 15px;
+}
+
 .social-icons a:last-child {
   margin-right: 0;
 }
@@ -189,4 +193,8 @@ a {
 
 a:hover, a:focus, a:active {
   color: #54a0ff;
+}
+
+.copyright {
+  background-color: #1a252f;
 }
